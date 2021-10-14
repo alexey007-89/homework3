@@ -71,10 +71,9 @@ public class hw3 {
             case 10:
             case 11:
                 System.out.println("Осень");
+            default:
+                System.out.println("Месяцев в году не может быть больше 12ти");
                 break;
-        }
-        if (monthNumber > 12) {
-            System.out.println("Месяцев в году не может быть больше 12ти");
         }
     }
 
