@@ -80,14 +80,14 @@ public class hw3 {
     public static void task6() {
         int age = 19;
         int salary = 58_000;
-        float creditLimit;
+        double creditLimit;
         if (age >= 23) {
-            creditLimit = salary * 3.0f;
-        } else creditLimit = salary * 2.0f;
+            creditLimit = salary * 3.0;
+        } else creditLimit = salary * 2.0;
         if (salary >= 50_000 && salary < 80_000) {
-            creditLimit = creditLimit * 1.2f;
+            creditLimit *= 1.2;
         } else if (salary >= 80_000) {
-            creditLimit = creditLimit * 1.5f;
+            creditLimit *= 1.5;
         }
         System.out.println("Мы готовы выдать вам кредитную карту с лимитом " + creditLimit + " рублей");
     }
@@ -100,13 +100,13 @@ public class hw3 {
         int monthsOfCredit = 12;
         double monthlyPay;
         double maxMonthlyPay = salary / 2;
-        if (age >= 23 && age < 30) {
-            creditPercent = ++creditPercent;
-        } else if (age < 23) {
-            creditPercent = creditPercent + 0.5;
+        if (age < 23) {
+            creditPercent += 1.0;
+        } else if (age < 30) {
+            creditPercent += 0.5;
         }
         if (salary > 80_000) {
-            creditPercent = creditPercent - 0.7;
+            creditPercent -= 0.7;
         }
         double monthCreditPercent = creditPercent / 100 / 12;
         monthlyPay = wantedSum * (monthCreditPercent / (1 - Math.pow(1 + monthCreditPercent, -monthsOfCredit)));
